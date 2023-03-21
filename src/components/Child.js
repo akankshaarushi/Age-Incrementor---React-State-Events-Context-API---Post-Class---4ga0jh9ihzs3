@@ -1,7 +1,16 @@
-import React from "react";
+import React from 'react';
 
-function Child() {
-    return <div id="child"></div>;
+const Child = (props) => {
+  const handleClick = () => {
+    props.incrementAge();
+  }
+
+  return (
+    <div id="child">
+      <p id="text">Today I am {props.age} Years of Age</p>
+      <button id="button" onClick={handleClick}>Increment Age</button>
+    </div>
+  );
 }
 
 export default Child;
